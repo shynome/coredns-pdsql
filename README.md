@@ -26,17 +26,6 @@ pdsql <dialect> <arg> {
 }
 ~~~
 
-## Install Driver
-
-pdsql need db driver for dialect, to install a driver you need to add import in plugin.cfg, like
-
-~~~ txt
-pdsql_mysql:github.com/jinzhu/gorm/dialects/mysql
-pdsql_sqlite:github.com/jinzhu/gorm/dialects/sqlite
-~~~
-
-pdsql_mysql and pdsql_sqlite are meaningless, choose to prevent duplicated.
-
 ## Examples
 
 Start a server on the 1053 port, use test.db as backend.
