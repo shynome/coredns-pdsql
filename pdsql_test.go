@@ -9,13 +9,15 @@ import (
 	"github.com/coredns/coredns/plugin/pkg/dnstest"
 	"github.com/coredns/coredns/plugin/test"
 
-	"github.com/jinzhu/gorm"
 	"github.com/miekg/dns"
 	"golang.org/x/net/context"
+	"gorm.io/driver/sqlite"
+	"gorm.io/gorm"
 )
 
 func TestPowerDNSSQL(t *testing.T) {
-	db, err := gorm.Open("sqlite3", ":memory:")
+	dialector := sqlite.Open(":memory:")
+	db, err := gorm.Open(dialector, &gorm.Config{})
 	if err != nil {
 		t.Fatal(err)
 	}
