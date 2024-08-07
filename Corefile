@@ -1,9 +1,5 @@
 # Corefile
 https://.:8053 {
-  cache {
-    success 5000 3600 3600
-    keepttl
-  }
   pdsql postgres {$DB} {
     auto-migrate
   }
