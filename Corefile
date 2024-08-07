@@ -1,0 +1,6 @@
+# Corefile
+https://.:8053 {
+  pdsql postgres {$DB} {
+    auto-migrate
+  }
+}
